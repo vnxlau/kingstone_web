@@ -1,4 +1,4 @@
-<div class="center_content">
+<div class="center_content_pages">
     <div class="home_section_left">
         <img src="<?php echo base_url(); ?>images/icon1.gif" alt="" title="" class="home_section_icon" border="0">
         <h2 class="home_title">What we do</h2>
@@ -6,7 +6,7 @@
         <div class="home_section_thumb">
         <img src="<?php echo base_url(); ?>images/home_section_thumb1.jpg" alt="" title="" border="0">
         </div>
-        <p><span>Lorem ipsum dolor sit ame</span><br>
+        <p><span><a href="<?php echo site_url("main_controller/bio"); ?>">BIO</a></span><br>
         Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
         <br> <br>
         <span>Lorem ipsum dolor sit ame</span><br>

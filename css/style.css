@@ -106,6 +106,19 @@ line-height:18px;
 
 
 /*-------------------------------*/
+code {
+    font-family: Consolas, Monaco, Courier New, Courier, monospace;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D0D0;
+    color: #002166;
+    display: block;
+    width: 100px;
+    
+    margin: 14px 14px 14px 14px;
+    padding: 12px 10px 12px 10px;
+    float: left;
+}
 .center_content{
 width:960px;
 clear:both;
@@ -118,6 +131,21 @@ clear:both;
 margin:auto;
 padding:20px 0 20px 0;
 background:url(../images/center_bg_pages.gif) no-repeat center top;
+}
+.full_page{
+width:100%;
+min-height: 500px;
+height:auto;
+float:left;
+margin:0 14px 0 14px;
+padding:0 10px 20px 10px;
+/*background:url(../images/home_block_bg.gif) no-repeat center bottom;*/
+}
+.full_page p{
+clear:both;
+}
+.full_page p span{
+font-weight:bold;
 }
 .home_section_left{
 width:270px;

@@ -8,60 +8,87 @@ class Main_controller extends CI_Controller {
 	 *  Navegation Methods: starts with "goto_";
          *  Operation Methods: starts with "do_";
          *  
-	 */
-	public function index()
-	{
-
-		$this->load->view('public/welcome_message');
-	}
-        /*
-         * 
          * Use to call views
          * 
          */
         public function template($config = 'NULL', $data)
 	{
-            
             if(!isset($config['banner']) || $config=='NULL'){
                 $data['banner'] = '';
             }
             else{
                 $data['banner']= $config['banner'];
             }
-            
             if(!isset($config['main']) || $config=='NULL'){           
                 $data['main'] = 'home';
             }
             else {
                 $data['main']=$config['main'];
             }
-            //echo $config['footer'] = '';
-
             $this->load->view('public/template/template',$data);
 	}
-        public function goto_bio()
+        public function index()
 	{
-            //$this->load->model('bd_cesar');
             $config= array(
-                'main' => 'public/bio'
+                'main' => 'public/welcome_message'
+            );
+            $this->lang->load('strings','pt');
+            $data['msg'] = $this->lang->line('msg');
+            $this->template($config,$data);
+	}
+        /*
+         * 
+         * Navegação - Inicio
+         */
+        public function empresa()
+	{
+            $config= array(
+                'main' => 'public/empresa'
             );
             $this->lang->load('strings','english');
             $data['msg'] = $this->lang->line('msg');
-
             $this->template($config,$data);
 	}
-        public function teste()
+        public function produtos()
 	{
-            //$this->load->model('bd_cesar');
             $config= array(
-                'main' => 'public/test_index',
-                'banner' => 'public/template/banner'
+                'main' => 'public/produtos'
             );
             $this->lang->load('strings','english');
             $data['msg'] = $this->lang->line('msg');
-
             $this->template($config,$data);
 	}
+        public function servicos()
+	{
+            $config= array(
+                'main' => 'public/servicos'
+            );
+            $this->lang->load('strings','english');
+            $data['msg'] = $this->lang->line('msg');
+            $this->template($config,$data);
+	}
+        public function portfolio()
+	{
+            $config= array(
+                'main' => 'public/portfolio'
+            );
+            $this->lang->load('strings','english');
+            $data['msg'] = $this->lang->line('msg');
+            $this->template($config,$data);
+	}
+        public function contactos()
+	{
+            $config= array(
+                'main' => 'public/contactos'
+            );
+            $this->lang->load('strings','english');
+            $data['msg'] = $this->lang->line('msg');
+            $this->template($config,$data);
+	}
+        /*
+         * 
+         * Fim - Navegação
+         */
 }
 
 /* End of file welcome.php */
