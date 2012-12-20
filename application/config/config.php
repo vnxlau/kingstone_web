@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost:88/kingstone_web_ci/';
+$config['base_url']	= 'http://localhost:88/kingstone_web/';
 
 /*
 |--------------------------------------------------------------------------
